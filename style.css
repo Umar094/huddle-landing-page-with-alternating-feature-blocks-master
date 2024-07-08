@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+}
+
+.whole-site{
+    background-color: aquamarine;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.site-header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.site-header + img{
+    flex-grow: 1;
+}
+
+.box-underHeader{
+    height: 400px;
+    background-color: red;
+}

@@ -8,37 +8,58 @@ body{
 }
 
 h1{
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
 h2{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     font-size: 2rem;
     margin-bottom: 30px;
 }
 
 p{
-    font-size: 1.5rem;
-    margin-bottom: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 19px;
 }
-/*  font-family: "Poppins", sans-serif;
-    font-weight: 600;
-*/
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
 button{
     border-style: none;
+    font-family: "Open Sans", sans-serif;
     font-size: 1.2rem;
+    background-color: hsl(322, 100%, 66%);
+    color: hsl(0, 0%, 100%);
+    border-radius: 30px;
+    padding: 14px 0;
+    cursor: pointer;
 }
+
+
+button:hover{
+    background-color: hsl(322, 100%, 80%);
+}
+
 .whole-site{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     min-height: 100vh;
-
 }
 
-.head-bc-img{
+.head-img-wrapper{
     background-image: url(images/bg-hero-desktop.svg);
     background-repeat: no-repeat;
     background-color:  hsl(193, 100%, 96%);
+    padding: 0 50px;
     
 }
 
@@ -48,21 +69,28 @@ button{
     justify-content: space-between;
     width: 100%;
     height: min-content;
-    padding: 0 80px;
+    padding-top: 30px;
 }
 
-.header-button-box{
-    border-radius: 30px;
-    width: 180px;
-    height: 50px;
+.header-button{
+    width: 100%;
+    max-width: 200px;
+    box-shadow: 0 5px 8px hsl(0, 0%, 0%, 0.1);
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
 }
+
+.header-button:hover{
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 60%);
+}
+
 .box-underHeader{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     width: 100%;
     height: max-content;
-    gap: 30px;
-    padding: 0 80px;
 }
 
 
@@ -70,23 +98,29 @@ button{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 50%;
+    padding: 30px;
+}
+
+.box-underHeader article h1{
+    text-align: center;
 }
 
 .box-underHeader article button{
-    height: 50px;
     width: 18.5rem;
-    border-radius: 30px;
 }
 
-.img-box{
+.underHeader-img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 60%;
     padding: 30px 0;
 }
 
-.img-box img{
+.underHeader-img-box img{
     max-width: 100%;
-    display: block;
     height: auto;
 }
 
@@ -98,37 +132,38 @@ button{
     position: relative;
     width: 100%;
     background-color: rgb(252, 252, 252);
-    padding: 160px 80px;
+    padding: 140px 50px;
 }
 
 
 
-.box{
+.main-box{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-around;
     width: 100%;
-    min-height: 300px;
+    min-height: 200px;
     background-color: hsl(0, 0%, 100%);
     margin-bottom: 40px;
     border-radius: 13px;
     box-shadow: 0 0 6px  hsl(0, 0%, 0%, 0.2);
+    padding: 20px;
 }
 
 
-.box-text-box{
+.mainBox-text-box{
     width: 60%;
-    padding: 80px;
+    padding: 40px;
 }
 
-.box-img-box{
-    width: 40%;
-    padding: 30px;
-}
-
-.box-img-box img{
-    width: 100%;
+.mainBox-img-box{
     height: auto;
+    width: 370px;
+}
+
+.mainBox-img-box img{
+    width: 100%;
 }
 
 .cross-box{
@@ -137,9 +172,8 @@ button{
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: -90px;
+    bottom: -70px;
     width: 60%;
-    padding: 20px;
     background-color: hsl(0, 0%, 100%);
     min-height: 200px;
     border-radius: 13px;
@@ -147,38 +181,52 @@ button{
 }
 
 .cross-box p{
-    font-size: 2rem;
+    text-align: center;
+    font-size: 1.7rem;
     font-weight: 600;
+    margin-bottom: 5%;
 }
 
 .cross-box button{
     width: 100%;
     max-width: 360px;
-    border-radius: 30px;
-    padding: 10px 0;
     box-shadow: 0 10px 10px hsl(0, 0%, 0%, 0.2);
 }
 
-.footer-box{
-    display: flex;
-    align-items: center;
-    height: 500px;
+.footer-container{
+
+    min-height: 500px;
     width: 100%;
     background-color: hsl(192, 100%, 9%);
+    padding-bottom: 50px;
+    padding-top: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
-.foot-text-box{
+.footer-text-box{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
+.footer-text-box p, a{
+    color: hsl(0, 0%, 100%);
+}
+
+.copy-right{
+    font-size: 1rem;
+    text-align: end;
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+}
 
 .icon{
     height: 30px;
     width: 30spx;
     margin-left: 10px;
+    color: #ffffff;
+}
 
-} 
 
 .footer-box1{
     display: flex;
@@ -188,6 +236,135 @@ button{
 
 .icons-text{
     width: 1rem;
+    margin-right: 10px;
 }
 
+.p-flex{
+    display: flex;
+    flex-direction: row;
+}
 
+.footer-logo{
+    margin-bottom: 20px;
+}
+
+@media all  and (max-width:900px){
+    p, button{
+        font-size: 1rem;
+    }
+
+    h1{
+        margin-top: 20px;
+        font-size: 2rem;
+    }
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    .head-img-wrapper{
+        background-image: url(images/bg-hero-mobile.svg);
+        padding: 0 15px;
+    }
+
+
+    .box-underHeader{
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .box-underHeader article button{
+        width: 15rem;
+    }
+
+    .mainBox-img-box{
+        width: 300px;
+    }
+
+    .box-underHeader article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    .box-underHeader article p{
+        text-align: center;
+    }
+
+    .mainContainer{
+        padding: 140px 0;
+    }
+    
+    .main-box{
+        justify-content: center;
+        flex-direction: column-reverse;
+        width: 94%;
+        padding: 0;
+    }
+
+    .mainBox-text-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+
+    .mainBox-text-box p{
+        text-align: center;
+    }
+
+    
+    .social-media-icons{
+        align-self: center;
+    }
+
+
+    .cross-box{
+        padding: 0;
+        width: 90%;
+        min-height: 140px;
+        font-size: 1.3rem;
+    }
+
+    .cross-box p {
+        text-align: center;
+        font-size: 1.1rem;
+    }
+
+    .cross-box button{
+        padding: 10px 0;
+        max-width: 200px;
+    }
+
+    .footer-container{
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+
+    .footer-text-box{
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-box1{
+        display: flex;
+        flex-direction: column;
+        flex-basis: 0;
+    }
+
+    .social-media-icons{
+        justify-self: center;
+    }
+
+    .copy-right{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+
+
+}
